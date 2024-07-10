@@ -1,0 +1,16 @@
+<%- include('Partials/header') %>
+
+<h1>Thoughtful Chronicles</h1>
+<a href="/compose">Compose</a>
+<% posts.forEach((post, index) => { %>
+    <div>
+        <h2><a href="/posts/<%= index %>"><%= post.title %></a></h2>
+        <p><%= post.content.substring(0, 100) %>...</p>
+    </div>
+<% }); %>
+
+<%- include('Partials/footer') %>
+
+
+
+
